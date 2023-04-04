@@ -1,0 +1,16 @@
+header {
+    background-color: #121555;
+    border-radius: 5px;
+}
+
+header > h1 {
+    text-align: center;
+    color: #b30000; 
+    
+}
+
+section > img {
+    width: 70%;
+    height: 500px;
+    border-radius: 5px;
+}

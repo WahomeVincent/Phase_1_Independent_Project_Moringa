@@ -1,7 +1,8 @@
 body {
-    background-color: #C5D0CE;
+    background: linear-gradient(to left, #040303, #272121,#181414, #272121);
     margin: 0;
     padding: 0;
+    color: azure;
 }
 
 header {
@@ -45,4 +46,27 @@ main {
     width: 225px;
     height: 225px;
     border-radius: 5px;
+}
+
+.row-1{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.row-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: aqua;
+    height: 150px;
+    margin-top: 50px;
+}
+
+footer > p {
+    text-align: center;
+    font-size: 100px;
+    color: red;
 }

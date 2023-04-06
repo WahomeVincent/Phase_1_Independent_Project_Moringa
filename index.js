@@ -9,20 +9,35 @@ const main = document.querySelector('main')
 
 fetch('https://thronesapi.com/api/v2/Characters')
     .then(res => res.json())
-    .then(character=> {
-        let myCharacter = document.createElement('div');
-        myCharacter.id = "my-character";
-        myCharacter.innerHTML = `
-            <img src="${character[0].imageUrl}" alt="daenerys.jpg">
-            <div id = "character-details">
-            <p>Family : ${character[0].family}</p>
-            <p>FirstName: ${character[0].firstName}</p>
-            <p>Fullname: ${character[0].fullName}</p>
-            <p>LastName: ${character[0].lastName}</p>
-            <p>Title: ${character[0].title}</p>
-            </div>
+    .then(characters=> {
+        characters.forEach(character => {
+        let card = document.createElement('div');
+        let details =document.createElement('div')
+
+        card.className = "card";
+        card.innerHTML = `
+            <img src="${character.imageUrl}" alt="daenerys.jpg">
+            <div>
+            <button id = "character-details">Open</button>
+            </div>  
             `
-            main.appendChild(myCharacter)
+            main.appendChild(card)
+
+            const btn = document.getElementById('character-details')
+            btn.addEventListener('click', () => {
+                details.innerHTML = `
+                <p>Family : ${character.family}</p>
+                <p>FirstName: ${character.firstName}</p>
+                <p>Fullname: ${character.fullName}</p>
+                <p>LastName: ${character.lastName}</p>
+                <p>Title: ${character.title}</p>
+                `
+            })
+
+            card.appendChild(details)
+
+        })
     })
 
-    
+  
+        

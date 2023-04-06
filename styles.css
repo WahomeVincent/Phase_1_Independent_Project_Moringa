@@ -1,12 +1,12 @@
 body {
-    background: linear-gradient(to left, #040303, #272121,#181414, #272121);
+    background: linear-gradient(to right, #040303, #0a0a0a, #161414, #1E1B1B);
     margin: 0;
     padding: 0;
     color: azure;
 }
 
 header {
-    background-color: #AFBFBD;
+    background-color: #181414;
     width: 100%;
     display: flex;
     align-items: center;
@@ -16,15 +16,16 @@ header {
 section > img {
     width: 100%;
     height: 450px;
+    border-radius: 3px;
 }
 
 header > h1 {
-    color: #b30000; 
+    color: #f1e9db; 
 }
 
 div > h3 {
     text-align: center;
-    color: #b30000;
+    color: #f1e9db;
 }
 
 main {
@@ -39,28 +40,55 @@ main {
 
 .card{
     margin-bottom: 40px;
+    width: 250px;
+    word-wrap: break-word;
+    
 
 }
 
 .card > img {
-    width: 225px;
-    height: 225px;
+    width: 250px;
+    height: 250px;
     border-radius: 5px;
 }
 
-.row-1{
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
+.details {
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+
 }
 
-.row-2 {
+#character-details{
+    background: linear-gradient(to right, #2381a9, #209DD3, #1BAFEE  );
+    border-style: none;
+    border-radius: 5px;
+    width: 100px;
+}
+
+#subscription-form {
+    color: #040303;
+    background-color: white;
+    padding: 20px;
+
+    
+}
+
+fieldset {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    
+    align-items: center;
+    width: 400px;
+    margin-left: 400px;
+    padding: 20px;
+    
+
 }
 
 footer {
-    background-color: aqua;
+    background: linear-gradient(to right, #a0def8, #89C4DD, #87B5C9);
     height: 150px;
     margin-top: 50px;
 }
@@ -68,5 +96,5 @@ footer {
 footer > p {
     text-align: center;
     font-size: 100px;
-    color: red;
+    color: #1BAFEE ;
 }

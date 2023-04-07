@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded' ,function (){
 
+const searchInput = document.getElementById('mysearch')    
+searchInput.addEventListener('submit', (e) => e.preventDefault())
 const subscriptionForm = document.getElementById('subscription-form');
 
 subscriptionForm.addEventListener('submit', (event) => {

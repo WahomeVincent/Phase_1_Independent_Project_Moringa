@@ -62,32 +62,66 @@ main {
 
 }
 
-#character-details{
+button{
     background: linear-gradient(to right, #2381a9, #209DD3, #1BAFEE  );
     border-style: none;
     border-radius: 5px;
     width: 100px;
 }
 
+button:hover {
+    color: #f1e9db;
+}
+
 #subscription-form {
     color: #040303;
     background-color: white;
     padding: 20px;
+}
 
-    
+label {
+    font-size: 20px;
+    font-style: oblique;
+    margin-top: 20px;
+}
+
+input {
+    width: 300px;
+    border-radius: 2px;
+    border-style: none;
+    height: 30px;
+}
+
+input:hover {
+    background-color: #a0def8;
 }
 
 fieldset {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
     align-items: center;
-    width: 400px;
+    width: 500px;
     margin-left: 400px;
     padding: 20px;
+    background-color: #89C4DD;
     
 
+}
+
+#check-box{
+    width: 15px;
+    margin-top: 25px;
+}
+
+#sub {
+    font-size: 15px;
+}
+
+#row-3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 footer {
@@ -108,4 +142,9 @@ footer > p {
     font-size: 20px;
     font-style: oblique;
     text-align: center;
+}
+
+.default {
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
 }

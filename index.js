@@ -11,30 +11,28 @@ subscriptionForm.addEventListener('submit', (event) => {
     document.getElementById('thankyou').style.display = "block";
 })
 
-
-
 const main = document.querySelector('main')
-
 
 fetch('https://thronesapi.com/api/v2/Characters')
     .then(res => res.json())
     .then(characters=> {
+        let counter = 0;
         characters.forEach(character => {
-        let card = document.createElement('div');
-        let details =document.createElement('div')
+            let card = document.createElement('div');
+            let details =document.createElement('div')
 
-        details.className = "details"
-        card.className = "card";
-        card.innerHTML = `
-            <img src="${character.imageUrl}" alt="daenerys.jpg">
-            <p>${character.fullName}</p>
-            <div>
-            <button id = "character-details">View More</button>
-            </div>  
-            `
+            details.className = "details"
+            card.className = "card";
+            card.innerHTML = `
+                <img src="${character.imageUrl}" alt="daenerys.jpg">
+                <p>${character.fullName}</p>
+                <div>
+                <button id = "character-details-${counter}">View More</button>
+                </div>  
+                `
             main.appendChild(card)
 
-            const btn = document.getElementById('character-details')
+            const btn = document.getElementById(`character-details-${counter}`)
             btn.addEventListener('click', () => {
                 details.innerHTML = `
                 <p>Family : ${character.family}</p>
@@ -46,10 +44,8 @@ fetch('https://thronesapi.com/api/v2/Characters')
                 card.appendChild(details)
             })
 
-            
+            counter++;
 
         })
-    })
-
-  
+    })  
 })        

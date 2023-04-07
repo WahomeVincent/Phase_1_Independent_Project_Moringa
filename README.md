@@ -13,8 +13,10 @@
 <h2>Setup</h2>
 <p>Since this project only fetches data from a free public API, there isn't much, if any,setup required by the user required so as to interact with this project.</p>
 
-<p>You can find the live link to my project here <a href = "https://wahomevincent.github.io/Phase_1_Independent_Project/">
+
+<p>You can find the live link to my project here [GOT project] (https://wahomevincent.github.io/Phase_1_Independent_Project/)>
 </p>
+
 
 <h3>LICENSE</h3>
 <p>
